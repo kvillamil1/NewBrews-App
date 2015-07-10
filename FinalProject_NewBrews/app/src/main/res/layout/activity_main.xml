@@ -1,0 +1,92 @@
+<!--XML layout for Home page-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ff000000"
+    android:orientation="vertical">
+
+    <!--Layout for Header-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/logo"
+            android:layout_gravity="right"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toStartOf="@+id/imageView2" />
+
+        <ImageView
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:background="@drawable/name"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_row="0"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <!--Layout for Main buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center|center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/releaseButton"
+            android:background="@drawable/release_button"
+            android:layout_above="@+id/typesButton"
+            android:layout_centerHorizontal="true"
+            android:onClick="latestOnClick"
+            android:layout_column="0"
+            android:layout_marginBottom="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/typesButton"
+            android:background="@drawable/type_button"
+            android:layout_above="@+id/barButton"
+            android:layout_centerHorizontal="true"
+            android:onClick="typeOnClick"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:layout_marginBottom="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/barButton"
+            android:background="@drawable/bar_button"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/releaseButton"
+            android:layout_alignEnd="@+id/releaseButton"
+            android:onClick="barOnClick"
+            android:layout_row="9"
+            android:layout_column="0" />
+    </LinearLayout>
+
+</LinearLayout>

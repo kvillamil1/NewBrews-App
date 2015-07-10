@@ -1,0 +1,88 @@
+<!--XML layout for Latest Releases page-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kat.finalproject_newbrews.LatestReleases">
+
+    <!--Layout for Header-->
+    <LinearLayout
+        android:id="@+id/latestLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/logo"
+            android:padding="2dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/releasebutton"
+            android:padding="2dp" />
+
+    </LinearLayout>
+
+    <!--Enables scrolling for buttons-->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/lrLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+    <!--Layout for Navigation Buttons-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_column="0"
+        android:layout_row="7">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/button2"
+            android:layout_toRightOf="@+id/button2"
+            android:background="@drawable/navhomefinal"
+            android:onClick="latesthomeOnClick" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="35dp"
+            android:layout_height="37dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignTop="@+id/button"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/navbackfinal"
+            android:onClick="latestbackOnClick" />
+
+    </RelativeLayout>
+</LinearLayout>
